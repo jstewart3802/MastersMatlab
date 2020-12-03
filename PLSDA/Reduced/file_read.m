@@ -4,11 +4,10 @@ function [amidenormMaster1 namespectra1] = file_read(num_files, subfolders1)
     ROIspectraMasterNUM = {}; % this is the number of specrtra in the ROI
 
 
-    for i = 1:num_files%%% CHANGE THIS TO 1:2 IF YOU ONLY WANT TO SAY 2 length(subfolders1)
+    for i = 1:num_files
         dirName = [char(subfolders1(i)) '/']; 
         imgfilename = dir([dirName '*.dms']); 
         img = [imgfilename.folder , '/',  imgfilename.name ]; 
-        %img = [filename(i).folder , '/',  filename(i).name ];
 
         [wavenumbers, data, width, height, filename1, acqdate]=readvarianmosaic_v4_1(img); 
         [pathstr, name, ext] = fileparts(filename1);
@@ -21,8 +20,7 @@ function [amidenormMaster1 namespectra1] = file_read(num_files, subfolders1)
         imagesc(sum(data,3));
 
         set(gcf, 'units','normalized','outerposition',[0 0 1 1]); % make it full screen
-        ROI  = impoly(gca); %imfreehand imrect(gca);
-
+        ROI  = impoly(gca); 
         wait(ROI); 
         ROIBW = ROI.createMask; 
         [yCoordinates, xCoordinates] = find(ROIBW);

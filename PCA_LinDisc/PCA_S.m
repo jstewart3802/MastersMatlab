@@ -1,4 +1,4 @@
-%% Plot scores for WT or TG for PCs as set below
+%% Plot scores for WT and TG for PCs as set in PCi and PCj
 function PCA_S(PCi, PCj, PCI, PCJ, PCAWT, PCATG)
     figure('Name',['PCA scores for PC',PCI,' and PC',PCJ]);
     sc1 = scatter(PCAWT(:,PCi),PCAWT(:,PCj),'b');

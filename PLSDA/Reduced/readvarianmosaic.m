@@ -5,7 +5,7 @@ function [wavenumbers, data, width, height, filename, acqdate]=readvarianmosaic(
 
 
 
-%   Function: readvarianmosaic_v4_1
+%   Function: readvarianmosaic
 %   Usage: [wavenumbers, data, width, height, filename, acqdate] = readvarianmosaic_v4_1(filename, keepme);
 %   Usage: [wavenumbers, data, width, height, filename, acqdate] = readvarianmosaic_v4_1();
 %           (second version prompts for a filename)
@@ -254,15 +254,6 @@ clear tempdata;
 
 data=double(data);
 [height, width, vals]=size(data);
-
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%plot the data
-%window_title = filename;
-%figure('Name',window_title,'NumberTitle','off');
-%imagesc(sum(data,3));axis image;axis off;
-%[pathstr, name, ext] = fileparts(filename); 
-%titlefilename = fullfile(pathstr,name);
-%title(titlefilename, 'interpreter', 'none');
 
 end % of main function
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

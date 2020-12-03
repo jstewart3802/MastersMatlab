@@ -1,3 +1,4 @@
+%%plot loadings for two PCs
 function PCA_L(PCi, PCj, PCI, PCJ, x, PCAloadings)
     figure('Name',['PCA loadings for PC',PCI,' and PC',PCJ]);
     load1 = plot(x,PCAloadings(:,PCi));
