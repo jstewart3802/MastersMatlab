@@ -252,12 +252,12 @@ data=double(data);
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %plot the data
-%window_title = filename;
-%figure('Name',window_title,'NumberTitle','off');
-%imagesc(sum(data,3));axis image;axis off;
-%[pathstr, name, ext] = fileparts(filename); 
-%titlefilename = fullfile(pathstr,name);
-%title(titlefilename, 'interpreter', 'none');
+window_title = filename;
+figure('Name',window_title,'NumberTitle','off');
+imagesc(sum(data,3));axis image;axis off;
+[pathstr, name, ext] = fileparts(filename); 
+titlefilename = fullfile(pathstr,name);
+title(titlefilename, 'interpreter', 'none');
 
 end % of main function
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

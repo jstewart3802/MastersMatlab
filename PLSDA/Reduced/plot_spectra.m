@@ -3,7 +3,7 @@ function plot_spectra(x,WT,TG)
     h1 = plot(x, WT, 'b'); 
     hold on
     h2 = plot(x, TG, 'r'); 
-    %set(gca,'XDir','reverse');
+    set(gca,'XDir','reverse'); %use this to reverse wavenumbers
     legend([h1(1), h2(1)], 'WT', 'TG')
     xlabel('Wavenumbers (cm^{-1})')
     ylabel('Absorbance (arbitary units)')

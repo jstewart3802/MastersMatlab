@@ -10,7 +10,6 @@ PCK = int2str(PCk);
 PCL = int2str(PCl);
 
 %% plot loadings
-
 figure('Name',['PCA loadings for PC',PCI,', PC',PCJ,', PC',PCK,' and PC',PCL]);
 load1 = plot(x_crop,PCAloadings(:,PCi));
 hold on

@@ -34,5 +34,5 @@ x = rescale(x,1000,3900);%input range of real wavenumbers here
 x_crop = x(1:410);
 
 
-%% plotcropped
+%% plot the cropped spectra
 plot_spectra(x_crop,WT,TG);
