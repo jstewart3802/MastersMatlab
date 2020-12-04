@@ -9,7 +9,7 @@ function [amidenormMaster1 namespectra1] = file_read(num_files, subfolders1)
         imgfilename = dir([dirName '*.dms']); 
         img = [imgfilename.folder , '/',  imgfilename.name ]; 
 
-        [wavenumbers, data, width, height, filename1, acqdate]=readvarianmosaic_v4_1(img); 
+        [wavenumbers, data, width, height, filename1, acqdate]=readvarianmosaic(img); 
         [pathstr, name, ext] = fileparts(filename1);
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -65,7 +65,9 @@ function [amidenormMaster1 namespectra1] = file_read(num_files, subfolders1)
         meanSpectra = mean(ROIspectra);    
         Amidenorm = meanSpectra;
         % this prints out the file you are working on
-        i
+        percent = round(i/num_files*100);
+        fprintf('Read %d files out of %d (%d%%)\n',i,num_files,percent)
+        
 
         [g, gN] = grp2idx(imgfilename.name);
         lstNames{i} = gN;
